@@ -60,7 +60,7 @@ export default function Home({ exploreData, cardsData }: Props) {
   )
 }
 
-export const getStaticProps: GetStaticProps<Props> = async (context) => {
+export const getStaticProps: GetStaticProps<Props> = async () => {
 
   const exploreData = await fetchExploreData()
   const cardsData = await fetchCardsData()
