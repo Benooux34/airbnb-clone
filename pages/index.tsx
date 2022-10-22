@@ -1,5 +1,5 @@
-import { GetStaticProps } from 'next'
 import Head from 'next/head'
+import { GetStaticProps } from 'next/types'
 import Banner from '../components/Banner'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
