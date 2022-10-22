@@ -19,6 +19,6 @@ interface SearchData {
     star: number;
     price: string;
     total: string;
-    long: string;
-    lat: string;
+    long: number;
+    lat: number;
 }

@@ -3,6 +3,8 @@ import { useRouter } from 'next/dist/client/router'
 import React from 'react'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
+import InfoCard from '../components/InfoCard'
+import Map from '../components/Map'
 import { fetchSearchData } from '../utils/fetchSearchData'
 
 type Props = {
@@ -29,6 +31,17 @@ const search = ({ searchData }: Props) => {
                     <p className='searchFilter'>Rooms & Beds</p>
                     <p className='searchFilter'>More Filter</p>
                 </div>
+
+                <div className='flex flex-col'>
+                    {searchData.map((search) => (
+                        <InfoCard search={search} key={search.img} />
+                    ))}
+                </div>
+
+            </section>
+
+            <section className='hidden lg:inline-flex lg:min-w-[600px] lg:cursor-pointer'>
+                <Map searchData={searchData} />
             </section>
         </main>
 
