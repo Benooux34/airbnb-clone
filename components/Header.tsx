@@ -31,7 +31,7 @@ const Header = ({ placeholder }: Props) => {
         key: 'selection',
     }
 
-    const handleSelect = (ranges) => {
+    const handleSelect = (ranges: any) => {
         setStartDate(ranges.selection.startDate)
         setEndDate(ranges.selection.endDate)
     }
