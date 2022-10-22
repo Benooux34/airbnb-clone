@@ -1,17 +1,17 @@
 import { GetServerSideProps } from 'next'
 import { useRouter } from 'next/dist/client/router'
 import React from 'react'
-import Footer from '../components/Footer'
-import Header from '../components/Header'
-import InfoCard from '../components/InfoCard'
-import Map from '../components/Map'
-import { fetchSearchData } from '../utils/fetchSearchData'
+import Footer from '../../components/Footer'
+import Header from '../../components/Header'
+import InfoCard from '../../components/InfoCard'
+import Map from '../../components/Map'
+import { fetchSearchData } from '../../utils/fetchSearchData'
 
 type Props = {
     searchData: SearchData[],
 }
 
-const search = ({ searchData }: Props) => {
+const location = ({ searchData }: Props) => {
     const router = useRouter()
     const { location, startDate, endDate, number } = router.query
 
@@ -50,7 +50,7 @@ const search = ({ searchData }: Props) => {
   )
 }
 
-export default search
+export default location
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
     const searchData = await fetchSearchData()
