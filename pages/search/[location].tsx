@@ -1,4 +1,4 @@
-import { GetServerSideProps } from 'next'
+import type { GetServerSideProps } from 'next'
 import { useRouter } from 'next/dist/client/router'
 import React from 'react'
 import Footer from '../../components/Footer'
