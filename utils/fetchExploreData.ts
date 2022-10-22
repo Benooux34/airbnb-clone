@@ -1,6 +1,6 @@
 export const fetchExploreData = async () => {
 
-    const baseUrl = `${process.env.NEXT_PUBLIC_BASE_URL}`
+    const baseUrl = `${process.env.base_url}`
     const res = await fetch(baseUrl + "/api/getExploreData")
     const exploreData = await res.json()
 

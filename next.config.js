@@ -4,4 +4,7 @@ module.exports = {
   images: {
     domains: ["links.papareact.com"],
   },
+  env: {
+    base_url: 'airbnb-clone-ecru-zeta.vercel.app',
+  },
 };
