@@ -10,8 +10,7 @@ import {
 import { DateRangePicker } from "react-date-range"
 import "react-date-range/dist/styles.css"
 import "react-date-range/dist/theme/default.css"
-import Link from 'next/link'
-import Router, { useRouter } from 'next/dist/client/router'
+import Router, { useRouter } from 'next/router'
 
 type Props = {
     placeholder: string;
